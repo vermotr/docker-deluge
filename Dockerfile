@@ -7,10 +7,10 @@ RUN apt-get install -qy software-properties-common && \
 
 ADD start.sh /start.sh
 
-VOLUME ["/data"]
+VOLUME /config /downloads
+
 # Torrent port
-EXPOSE 53160
-EXPOSE 53160/udp
+EXPOSE 53160 53160/udp
 # WebUI
 EXPOSE 8112
 # Daemon

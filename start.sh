@@ -2,8 +2,8 @@
 
 set -e
 
-rm -f /data/deluged.pid
+rm -f /config/deluged.pid
 
-deluged -d -c /data -L info -l /data/deluged.log &
-deluge-web -c /data &
+deluged -d -c /config -L info -l /config/deluged.log &
+deluge-web -c /config &
 wait
