@@ -1,6 +1,12 @@
-FROM ubuntu:trusty
+# Deluge
+#
+# VERSION 1.0.0
 
-RUN apt-get install -qy software-properties-common && \
+FROM ubuntu:trusty
+MAINTAINER Romain Vermot <romain@vermot.eu>
+
+RUN apt-get update && \
+    apt-get install -qy software-properties-common && \
     add-apt-repository ppa:deluge-team/ppa && \
     apt-get update -q && \
     apt-get install -qy deluged deluge-web
